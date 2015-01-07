@@ -1,0 +1,29 @@
+1. Vilken är den närmast föregående versionen av HTML, innan HTML5?
+C: HTML 4.01
+
+2. I HTML5 så är onblur och onfocus:
+A: Event attributes
+
+3. Vilken HTML är korrekt för att referera till ett externt style-sheet?
+B: <link rel="stylesheet" type="text/css" href="mystyle.css">
+
+4. Var i ett HTML-dokument är den korrekta platsen att referera till ett externt style-sheet?
+B: In the <head> section
+
+5. Vilken är den korrekta CSS syntaxen?
+C: body {color: black;}
+
+6. Vilket av följande påståendena är sant?
+B: jQuery is a JavaScript Library
+
+7. Vilken är den korrekta jQuery-koden för att sätta bakgrundsfärgen i alla p-elementen till röd?
+D: $("p").css("background-color","red");
+
+8. Hur fångar du informationen från ett formulär som är skickat med GET- metoden?
+A: $_GET[];
+
+9. Är följande påstående sant eller falskt? Include i PHP filer måste ha filändelsen ".inc" .
+A: Falskt
+
+10. Vad är den korrekta sättet att ansluta till en MySQL databas?
+A: mysqli_connect(host,username,password,dbname);
