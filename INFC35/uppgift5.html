@@ -2,17 +2,33 @@
 <html>
 <head>
 	<title>Uppgift 5</title>
+
+<!-- javascriptlösning -->
+<script type="text/javascript">
+	function validateEmail(){
+
+		var email = document.getElementById("email").value;
+		var checkEmail = document.getElementById("checkEmail").value;
+
+		if (email !== checkEmail){
+			alert("emails matchar inte");
+			return false;
+		}
+
+	}
+</script>
+
 </head>
 <body>
 
 <!-- action = var formuläret skickas, metod = post eller get -->
-<form action="uppgift5.php" method="post">
+<form id="uppgift5Form" action="uppgift5.php" method="post">
 
 	<!-- input, namn för att kunna hämtas ut i php, type och requried för validering -->
 	<!-- skriv requred="requred" för de som var stjärnmarkerade-->
 	<!-- skriv type="email" för att validera email -->
 
-	NAMN: <input name="name" required="required">
+<!--	NAMN: <input name="name" required="required"> -->
 	<br>
 
 	EMAIL: <input id="email" name="email" type="email" required="required">
@@ -22,19 +38,13 @@
 	<br>
 
 	<!-- submit-knapp -->
-	<input type="submit" value="lol" onclick="checkEmail();">
+	<input type="submit" value="lol" onclick="return validateEmail();" >
 </form>
 
-<script type="text/javascript">
-	function checkEmail(){
-		var email = document.getElementById("email").value;
-		var checkEmail = document.getElementById("email").value;
 
-		if (email !== checkEmail){
-			return false;
-		}
-	}
-</script>
+
+
+
 
 </body>
 </html>
