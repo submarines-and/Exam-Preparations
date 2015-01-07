@@ -9,9 +9,10 @@ OR die ('No DB-connection via MySQLi');
 
 		//skapa en variabel name och hämta ut namnet ur post-requesten
 		$name = $_POST["name"];
+		$email = $_POST["email"];
 
 		//fixa en query
-		$q = "insert into tenta values('$name');";
+		$q = "insert into tenta values('$name', '$email');";
 
 		//kör in querien i databasen
 		mysqli_query($dbc, $q);
