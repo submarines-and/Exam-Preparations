@@ -6,10 +6,12 @@
 <!-- javascriptlösning -->
 <script type="text/javascript">
 	function validateEmail(){
-
+		
+		//hämta värdet i email och checkEmail
 		var email = document.getElementById("email").value;
 		var checkEmail = document.getElementById("checkEmail").value;
 
+		//jämför innehåll, är det inte samma, visa error och returnera false, då submittas inte formuläret
 		if (email !== checkEmail){
 			alert("emails matchar inte");
 			return false;
