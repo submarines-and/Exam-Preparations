@@ -7,13 +7,13 @@ OR die ('No DB-connection via MySQLi');
 	//eftersom method var "post", hämtar vi ut variabler ur  $POST_[namn];
 
 	//kolla så att ingen (krävd) variabel är null
-	if(isset($_POST["name"])){
+	if(isset($_POST["name"]) && isset($_POST["email"])){
 
 		//skapa en variabel name och hämta ut namnet ur post-requesten
 		$name = $_POST["name"];
 		$email = $_POST["email"];
 
-		//fixa en query
+		//fixa en query, observera att jag bara kör 2 värden
 		$q = "insert into tenta values('$name', '$email');";
 
 		//kör in querien i databasen
