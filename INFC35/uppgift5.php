@@ -21,7 +21,7 @@ OR die ('No DB-connection via MySQLi');
 	}
 
 	//felhantering, returnera användaren till startsidan med ett felmedelande
-	//kan säkert printa ngt istället, kom inte på något
+	//kan säkert printa istället, kom inte på något kul
 	else{
         header('Location: index.html?errorMessage=fieldsNotComplete');
 	}
