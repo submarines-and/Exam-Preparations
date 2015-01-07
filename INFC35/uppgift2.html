@@ -1,0 +1,62 @@
+<!doctype html>
+<html><head>
+	<title>Fråga 2</title>
+</head>
+<body>
+	<!-- Kommentar 1 -->
+    Name (max 10 characters): <input type="text" id="fname" size="20"><br>
+  	<!-- Kommentar 2 -->
+    Age (from 1 to 100): <input type="text" id="age" size="20"><br>
+  	<!-- Kommentar 3 -->
+    E-mail: <input type="text" id="email" size="20"><br><br>
+  	<!-- Kommentar 4 -->
+	<button id="myBtn" onclick= "controlFields()"> OK</button>
+
+
+	<script type="text/javascript">
+		function controlFields(){
+			
+	    <!-- hämta komponenten med id "myBtn" och lägg till en listener för klicks -->
+		document.getElementById("myBtn").addEventListener("click", function(){
+
+			<!-- hämta index för ett @ i email-fältet, dvs om det finns ett -->
+			var at = document.getElementById("email").value.indexOf("@");
+
+	    	<!-- hämta ut åldern ur ålder-fältet -->
+			var age = document.getElementById("age").value;
+
+	    	<!-- hämta ut förnmanet -->
+			var fname = document.getElementById("fname").value;
+
+		    <!-- boolean för att hålla koll på om inputen är korrekt -->
+			submitOK = "true";
+
+			<!-- kolla om förnamnet är max 10 -->
+			if (fname.length > 10) {
+				alert("The name may have no more than 10 characters");
+				submitOK = "false";
+			} 
+
+			<!-- kolla om åldern är ett nummer, är större än 1 och mindre än 100 -->
+			if (isNaN(age) || age < 1 || age > 100) {
+				alert("The age must be a number between 1 and 100");
+				submitOK = "false";
+			}
+		
+			<!-- är at större än 1, finns det ett @ i emailen -->
+			if (at == -1) {
+				alert("Not a valid e-mail!");
+				submitOK = "false";
+			}
+		
+			<-- är ngt fel, returnera false -->
+			if (submitOK == "false") {
+				return false;
+			}
+		<!-- slut på listener -->
+		});
+	}
+
+	</script>
+</body>
+</html>
