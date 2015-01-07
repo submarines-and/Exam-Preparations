@@ -15,12 +15,26 @@
 	NAMN: <input name="name" required="required">
 	<br>
 
-	EMAIL: <input name="email" type="email" required="required">
+	EMAIL: <input id="email" name="email" type="email" required="required">
+	<br>
+
+	SKRIV IN IGEN: <input id="checkEmail"  type="email" required="required">
 	<br>
 
 	<!-- submit-knapp -->
-	<input type="submit" value="lol">
+	<input type="submit" value="lol" onclick="checkEmail();">
 </form>
+
+<script type="text/javascript">
+	function checkEmail(){
+		var email = document.getElementById("email").value;
+		var checkEmail = document.getElementById("email").value;
+
+		if (email !== checkEmail){
+			return false;
+		}
+	}
+</script>
 
 </body>
 </html>
