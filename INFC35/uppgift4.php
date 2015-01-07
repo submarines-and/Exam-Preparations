@@ -31,6 +31,6 @@
 	print "I've made a huge mistake";
 	}
 	
-	// stäng connection, dvs den som hämtades ur filen på rad 2
+	// stäng connection, dvs den som hämtades ur filen "safe_store/mysqli_connect.php"
 	mysqli_close($db_conn);
 ?>
